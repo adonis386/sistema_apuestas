@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Mi Cuenta - Sistema de Apuestas Online{% endblock %}
+        {% block content %}
+        <section class="account-info">
+            <h2>Estado de Cuenta</h2>
+            <table>
+                <tr>
+                    <th>Saldo Actual</th>
+                    <th>Apuestas Pendientes</th>
+                    <th>Ganancias Totales</th>
+                </tr>
+                <tr>
+                    <td>$500.00</td>
+                    <td>3</td>
+                    <td>$1,200.00</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="payment-section">
+            <h2>Realizar Pago</h2>
+            <div class="payment-container">
+                <form>
+                    <div class="group">
+                        <h1>Monto</h1>
+                        <input required="" type="text" class="input">
+                        <span class="highlight"></span>
+                        <span class="bar"></span>
+                        <label></label>
+                    </div>
+                    <button style="margin-top: 5px;" type="submit" class="btn">Pagar</button>
+                </form>
+                <div class="payment-options">
+                    <h3>Opciones de Pago</h3>
+                    <ul>
+                        <li><strong>Pago Móvil:</strong> 1234-5678-9012</li>
+                        <li><strong>Zelle:</strong> usuario@correo.com</li>
+                        <li><strong>Tarjeta:</strong> Visa, MasterCard, American Express</li>
+                    </ul>
+                </div>
+        </section>
+        <section class="transaction-filter">
+            <h2>Filtrar Movimientos de Transacciones</h2>
+            <form method="GET" action=>
+                <label for="start_date">Fecha de Inicio:</label>
+                <input type="date" id="start_date" name="start_date" required>
+                <label for="end_date">Fecha de Fin:</label>
+                <input type="date" id="end_date" name="end_date" required>
+                <button type="submit" class="btn">Filtrar</button>
+            </form>
+        </section>
+        
+        <section class="transaction-list">
+            <h2>Movimientos de Transacciones</h2>
+            <!-- Aquí se mostrarán los resultados filtrados -->
+        </section>
+    </div>
+{% endblock %}
+</body>
+</html>
